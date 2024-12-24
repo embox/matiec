@@ -1541,11 +1541,11 @@ void *visit(configuration_declaration_c *symbol) {
   s4o.print(FB_INIT_SUFFIX);
   s4o.print("(void) {\n");
   s4o.indent_right();
-  s4o.print(s4o.indent_spaces);
-  s4o.print("BOOL retain;\n");
-  s4o.print(s4o.indent_spaces);
-  s4o.print("retain = 0;\n");
-  
+  // s4o.print(s4o.indent_spaces);
+  // s4o.print("BOOL retain;\n");
+  // s4o.print(s4o.indent_spaces);
+  // s4o.print("retain = 0;\n");
+
   /* (B.3) Global variables initializations... */
   s4o.print(s4o.indent_spaces);
   vardecl = new generate_c_vardecl_c(&s4o,
