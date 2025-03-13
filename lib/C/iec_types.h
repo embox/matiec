@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <float.h>
 #include <stdint.h>
+#include <time.h>
 
 /*********************/
 /*  IEC Types defs   */
@@ -34,10 +35,11 @@ typedef double   IEC_LREAL;
  *          __time_to_timespec() and __tod_to_timespec() will need to be changed accordingly.
  *          (these macros may be found in iec_std_lib.h)
  */
-typedef struct {
-    long int tv_sec;            /* Seconds.  */
-    long int tv_nsec;           /* Nanoseconds.  */
-} /* __attribute__((packed)) */ IEC_TIMESPEC;  /* packed is gcc specific! */
+// typedef struct {
+//     long int tv_sec;            /* Seconds.  */
+//     long int tv_nsec;           /* Nanoseconds.  */
+// } /* __attribute__((packed)) */ IEC_TIMESPEC;  /* packed is gcc specific! */
+typedef struct timespec IEC_TIMESPEC;
 
 typedef IEC_TIMESPEC IEC_TIME;
 typedef IEC_TIMESPEC IEC_DATE;
